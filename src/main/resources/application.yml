@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: gateway-recall
+    output:
+        ansi:
+            enabled: always
+server:
+  port: 8083
+
+eureka:
+  client:
+    service-url: 
+        # defaultZone <> default-zone
+        defaultZone: http://localhost:8991/eureka
+
+logging:
+  level:
+    # netflix discovery
+    '[com.netflix.discovery.shared.resolver]': warn
+    '[org.springframework.cloud]': debug
